@@ -1,0 +1,7 @@
+# Node + Yarn
+node_modules
+*.log
+
+# Next + Build Artifacts
+.next
+dist

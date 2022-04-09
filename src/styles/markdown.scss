@@ -1,0 +1,38 @@
+.md-block {
+  p {
+    font-weight: normal;
+  }
+
+  a {
+    color: #6868fa;
+  }
+  a:hover {
+    color: #6868fa;
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: var(--step-up-6);
+    font-weight: bold;
+  }
+  h2 {
+    font-size: var(--step-up-5);
+    font-weight: bold;
+  }
+  h3 {
+    font-size: var(--step-up-4);
+    font-weight: bold;
+  }
+  h4 {
+    font-size: var(--step-up-3);
+    font-weight: bold;
+  }
+  h5 {
+    font-size: var(--step-up-2);
+    font-weight: bold;
+  }
+  h6 {
+    font-size: var(--step-up-1);
+    font-weight: bold;
+  }
+}
