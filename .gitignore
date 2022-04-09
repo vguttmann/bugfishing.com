@@ -5,3 +5,6 @@ node_modules
 # Next + Build Artifacts
 .next
 dist
+
+# Local Netlify folder
+.netlify
