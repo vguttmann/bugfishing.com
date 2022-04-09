@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import path from 'path';
 import Image from 'next/image';
 
 const PostContainer = styled.div`
@@ -35,11 +34,11 @@ const PostLink = styled.a`
   text-decoration: underline;
 `;
 
-export default function PostItem({ article, dirname }) {
+export default function PostItem({ article }) {
   let imageUrl = undefined;
   if (article.ogImage) {
     if (article.ogImage.url) {
-      imageUrl = path.join(__dirname, article.ogImage.url);
+      imageUrl = article.ogImage.url;
     }
   }
 
@@ -64,10 +63,4 @@ export default function PostItem({ article, dirname }) {
       </Link>
     </PostContainer>
   );
-}
-
-export function getStaticProps() {
-  return {
-    props: { dirname: __dirname }
-  };
 }
