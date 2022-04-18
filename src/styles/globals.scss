@@ -37,6 +37,14 @@
   @include light-prism;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .transition {
+    -webkit-transition: all 0.3s ease 0.05s;
+    transition: all 0.3s ease 0.05s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 .custom-img {
   object-fit: contain;
   width: 100% !important;

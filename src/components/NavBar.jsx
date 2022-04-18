@@ -33,6 +33,14 @@ const Menu = styled.ul`
 const MenuLinkStyle = styled.li`
   margin-left: 2em;
   text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  -webkit-transition: border-bottom 0.3s ease 0.05s;
+  transition: border-bottom 0.3s ease 0.05s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-bottom: 1px solid var(--color);
+  }
 `;
 
 const Brand = ({ children }) => (
