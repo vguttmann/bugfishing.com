@@ -15,7 +15,7 @@ export default function Slug({ readingTime, frontMatter, slug, source }) {
 
   return (
     <div>
-      <NextSeo title={frontMatter.title} description={frontMatter.description} />
+      <NextSeo title={`Reboot-Codes: Blog: ${frontMatter.title}`} description={frontMatter.description} />
       <Post
         readingTime={readingTime}
         title={frontMatter.title}

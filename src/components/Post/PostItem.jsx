@@ -11,6 +11,7 @@ const PostContainer = styled.div`
   padding: 12px;
   max-width: 30vw;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const PostImage = styled.div`
@@ -30,10 +31,6 @@ const Text = styled.p`
   font-size: var(--step-up-1);
 `;
 
-const PostLink = styled.a`
-  text-decoration: underline;
-`;
-
 export default function PostItem({ article }) {
   let imageUrl = undefined;
   if (article.ogImage) {
@@ -43,24 +40,21 @@ export default function PostItem({ article }) {
   }
 
   return (
-    <PostContainer>
-      {imageUrl ? (
-        <PostImage>
-          <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
-        </PostImage>
-      ) : (
-        <></>
-      )}
-      <Link as={`/blog/${article.slug}`} href="/blog/[slug]">
-        <Header href="/blog">{article.title}</Header>
-      </Link>
-      <Text>{article.description}</Text>
-      <Text>
-        <span>{article.timeReading.text}</span> • <span>{article.date}</span>
-      </Text>
-      <Link as={`/blog/${article.slug}`} href="/blog/[slug]">
-        <PostLink href="/blog">Read article</PostLink>
-      </Link>
-    </PostContainer>
+    <Link as={`/blog/${article.slug}`} href="/blog/[slug]">
+      <PostContainer>
+        {imageUrl ? (
+          <PostImage>
+            <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
+          </PostImage>
+        ) : (
+          <></>
+        )}
+        <Header>{article.title}</Header>
+        <Text>{article.description}</Text>
+        <Text>
+          <span>{article.timeReading.text}</span> • <span>{article.date}</span>
+        </Text>
+      </PostContainer>
+    </Link>
   );
 }

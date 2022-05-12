@@ -22,5 +22,6 @@ module.exports = {
 
     return config;
   },
-  experimental: { images: { layoutRaw: true } }
+  experimental: { images: { layoutRaw: true } },
+  reactStrictMode: false
 };

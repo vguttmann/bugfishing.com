@@ -30,8 +30,47 @@ body {
   font-family: system;
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto'), local('.HelveticaNeueDeskInterface'), local('.LucidaGrandeUI'), local('Ubuntu Light'),
-    local('Segoe UI'), local('DroidSans'), local('Tahoma');
+  src: local('SF Pro'), local('Roboto'), local('.HelveticaNeueDeskInterface'), local('.LucidaGrandeUI'),
+    local('Ubuntu Light'), local('Segoe UI'), local('DroidSans'), local('Tahoma');
+}
+
+// Define the 'SF Pro' font family.
+// Used for displaying general text.
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: bold;
+  src: url('../fonts/SFProDisplay-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: heavy;
+  src: url('../fonts/SFProDisplay-Heavy.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: normal;
+  src: url('../fonts/SFProDisplay-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: regular;
+  src: url('../fonts/SFProDisplay-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: light;
+  src: url('../fonts/SFProDisplay-Light.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  font-weight: thin;
+  src: url('../fonts/SFProDisplay-Thin.ttf');
 }
 
 // Define the "Fira Code" font family.

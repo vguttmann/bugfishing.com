@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import dayjs from 'dayjs';
 import { BsGithub, BsCodeSquare } from 'react-icons/bs';
 
@@ -16,8 +15,13 @@ const FooterDiv = styled.div`
 
 const FooterMain = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 50px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const FooterCopyright = styled.div`
@@ -26,13 +30,17 @@ const FooterCopyright = styled.div`
   min-height: 50px;
   justify-items: center;
   align-items: center;
-  item-align: center;
 `;
 
 const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  padding-bottom: 5px;
+
+  @media (min-width: 786px) {
+    width: 50%;
+  }
 `;
 
 const Header = styled.h1`
@@ -66,18 +74,25 @@ const BreadCrumb = ({ to, children }) => (
     <BsArrowUp />
   </ScrollButton>
 */
-const Text = styled.p``;
+const Text = styled.p`
+  text-align: center;
+  width: 100%;
+`;
 
 const Socials = styled.div`
-  margin-top: 5px;
+  margin-top: 12px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  item-align: center;
+  justify-content: center;
 `;
 const SocialButton = styled.a`
   padding: 10px;
   background-color: var(--contrast);
   border-radius: 5px;
   margin-right: 5px;
+
   &:hover {
     background-color: var(--green-300);
     color: var(--black);
@@ -100,9 +115,6 @@ export default function Footer() {
       tos.push(['/', 'root']);
     }
   });
-  console.log(arr);
-  console.log(tos);
-
   return (
     <FooterDiv>
       <FooterMain>
@@ -118,10 +130,10 @@ export default function Footer() {
           </BreadCrumbs>
         </FooterSection>
         <FooterSection>
-          <Text>
-            This site was statically generated with Next.js. All posts were written with MDX. And it was styled with
-            Styled Components and Sass.
-          </Text>
+          <p>
+            This site was statically generated with Next.js. All posts were written with MDX and styled with Styled
+            Components and Sass.
+          </p>
           <Socials>
             <SocialButton
               className="transition"

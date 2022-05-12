@@ -58,10 +58,9 @@ const MenuLink = ({ to, children }) => (
 export default function NavBar() {
   return (
     <Header>
-      <Brand>Reboot Studios</Brand>
+      <Brand>Reboot Codes</Brand>
       <Menu>
         <MenuLink to="/">Home</MenuLink>
-        <MenuLink to="/about">About</MenuLink>
         <MenuLink to="/blog">Blog</MenuLink>
       </Menu>
     </Header>

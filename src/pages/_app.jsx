@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 // Syntax highlighting for posts
 import Prism from 'prismjs';
 // Global Components
@@ -16,6 +17,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <NavBar />
       <Page>
         <Component {...pageProps} />

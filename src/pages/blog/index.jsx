@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
 import PostItem from '../../components/Post/PostItem';
@@ -11,11 +12,16 @@ const Posts = styled.div`
 
 export default function Blog({ articles }) {
   return (
-    <Posts>
-      {articles.map((article) => (
-        <PostItem key={article.slug} article={article} />
-      ))}
-    </Posts>
+    <>
+      <Head>
+        <title>Reboot-Codes: Blog</title>
+      </Head>
+      <Posts>
+        {articles.map((article) => (
+          <PostItem key={article.slug} article={article} />
+        ))}
+      </Posts>
+    </>
   );
 }
 
