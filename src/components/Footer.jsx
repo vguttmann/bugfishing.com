@@ -131,8 +131,8 @@ export default function Footer() {
         </FooterSection>
         <FooterSection>
           <p>
-            This site was statically generated with Next.js. All posts were written with MDX and styled with Styled
-            Components and Sass.
+            I think it's interesting to know what powers a site! This site was statically generated with Next.js and
+            styled with Styled Components and Sass. All posts were written with MDX. Amazingly hosted on Netlify.
           </p>
           <Socials>
             <SocialButton

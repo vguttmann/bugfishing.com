@@ -169,14 +169,16 @@ const repos = [
 ];
 
 const HeroSection = styled.div`
-  min-height: 600px;
+  margin-top: 32px;
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding-bottom: 12px;
+  align-items: center;
+  min-height: 600px !important;
 
-  @media (min-width: 1084px) {
+  @media (min-width: 834px) {
     flex-direction: row;
+    height: calc(100vh - 32px);
   }
 `;
 
@@ -211,20 +213,29 @@ const AboutText = styled.p`
 `;
 
 const GHRepos = styled.div`
-  margin: 0 12px;
+  width: 100%;
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr;
+  margin: 0 12px;
 
-  @media (min-width: 714px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 834px) {
+    grid-template-columns: calc(50% - 6px) calc(50% - 6px);
   }
 `;
 
 const GHCard = styled.div`
+  display: block;
   padding: 12px;
   border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
   border-radius: 5px;
+
+  @media (max-width: 768px) {
+    width: calc(90vw - 24px);
+  }
+
+  @media (min-width: 768px) {
+  }
 `;
 
 const GHOwner = styled.a`
@@ -242,23 +253,15 @@ const GHRepoURL = styled.p`
   margin-left: 5px;
 `;
 
-const GHDetails = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 5px;
-`;
-
 const GHDesc = styled.p`
-  font-size: var(--step-down-2);
-  opacity: 80%;
+  margin-top: 10px;
   margin: 0 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  opacity: 80%;
+  word-wrap: break-word;
 `;
 
 const TechnologiesSection = styled.div`
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   padding-bottom: 12px;
@@ -291,7 +294,7 @@ const Technologies = styled.div`
   margin: 0 12px;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: calc(50% - 6px) calc(50% - 6px);
   }
 `;
 
@@ -350,15 +353,9 @@ export default function Home() {
                   </a>
                 </GHRepoURL>
               </GHTitle>
-              <GHDetails>
-                <GHDesc>{repo.description}</GHDesc>
-                <GHDesc>
-                  <GoStar /> {repo.stargazerCount}
-                </GHDesc>
-                <GHDesc>
-                  <GoGitBranch /> {repo.forkCount}
-                </GHDesc>
-              </GHDetails>
+              <GHDesc>
+                {repo.description} <GoStar /> {repo.stargazerCount} <GoGitBranch /> {repo.forkCount}
+              </GHDesc>
             </GHCard>
           ))}
         </GHRepos>
