@@ -231,10 +231,7 @@ const GHCard = styled.div`
   border-radius: 5px;
 
   @media (max-width: 768px) {
-    width: calc(90vw - 24px);
-  }
-
-  @media (min-width: 768px) {
+    width: calc(90vw - 26px);
   }
 `;
 
