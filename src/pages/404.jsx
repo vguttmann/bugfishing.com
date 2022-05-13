@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NextLink from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const Container = styled.div`
   width: 100%;
@@ -53,10 +54,15 @@ const Link = ({ to, children }) => (
 
 export default function FourOhFour() {
   return (
-    <Container>
-      <NotFound />
-      <Header>404, That's an error!</Header>
-      <Link to="/">And here is a convenient link to the homepage.</Link>
-    </Container>
+    <>
+      <Head>
+        <title>Reboot-Codes: Not Found</title>
+      </Head>
+      <Container>
+        <NotFound />
+        <Header>404, That's an error!</Header>
+        <Link to="/">And here is a convenient link to the homepage.</Link>
+      </Container>
+    </>
   );
 }

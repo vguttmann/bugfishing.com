@@ -6,18 +6,16 @@ import Image from 'next/image';
 const PostContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: var(--contrast);
   border-radius: 5px;
   padding: 12px;
-  max-width: 30vw;
   justify-content: center;
   cursor: pointer;
+  border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
 `;
 
 const PostImage = styled.div`
   width: 100%;
   height: 100px;
-  border-radius: 5px;
   object-fit: contain;
   position: relative;
 `;

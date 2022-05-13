@@ -35,11 +35,19 @@ const Heading = styled.h1`
 
 const PostImage = styled.div`
   width: 100%;
-  height: 400px;
+  height: 200px;
   border-radius: 5px;
   object-fit: contain;
   position: relative;
   margin-top: 12px;
+
+  @media (min-width: 834px) {
+    height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const PostHeader = ({ title, description, date, ogImage }) => {
@@ -65,7 +73,7 @@ const PostHeader = ({ title, description, date, ogImage }) => {
       <Description>{description ? description : <></>}</Description>
       {ogImage ? (
         <PostImage>
-          <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" />
+          <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
         </PostImage>
       ) : (
         <></>

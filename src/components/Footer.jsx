@@ -87,6 +87,7 @@ const Socials = styled.div`
   item-align: center;
   justify-content: center;
 `;
+
 const SocialButton = styled.a`
   padding: 10px;
   background-color: var(--contrast);
@@ -96,6 +97,12 @@ const SocialButton = styled.a`
   &:hover {
     background-color: var(--green-300);
     color: var(--black);
+  }
+`;
+
+const TechLink = styled.a`
+  &:hover {
+    border-bottom: 1px solid var(--color);
   }
 `;
 
@@ -131,8 +138,27 @@ export default function Footer() {
         </FooterSection>
         <FooterSection>
           <p>
-            I think it's interesting to know what powers a site! This site was statically generated with Next.js and
-            styled with Styled Components and Sass. All posts were written with MDX. Amazingly hosted on Netlify.
+            I think it's interesting to know what powers a site! Speaking of, this site was statically generated with{' '}
+            <TechLink href="https://nextjs.org" target="_blank" className="transition">
+              Next.js
+            </TechLink>{' '}
+            and styled with{' '}
+            <TechLink href="https://styled-components.com/" target="_blank" className="transition">
+              Styled Components
+            </TechLink>{' '}
+            and{' '}
+            <TechLink href="https://sass-lang.com/" target="_blank" className="transition">
+              SCSS
+            </TechLink>
+            . All posts were written with{' '}
+            <TechLink href="https://mdxjs.com/" target="_blank" className="transition">
+              MDX
+            </TechLink>
+            . Amazingly hosted on{' '}
+            <TechLink href="https://www.netlify.com/" target="_blank" className="transition">
+              Netlify
+            </TechLink>
+            .
           </p>
           <Socials>
             <SocialButton

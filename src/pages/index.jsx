@@ -2,7 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { GoRepo, GoStar, GoGitBranch } from 'react-icons/go';
-import { SiDeno, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTypescript } from 'react-icons/si';
+import {
+  SiDeno,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+  SiTypescript,
+  SiRaspberrypi,
+  SiNuxtdotjs
+} from 'react-icons/si';
 import { BsPlugFill } from 'react-icons/bs';
 
 // placeholder generated from:
@@ -225,13 +235,18 @@ const GHRepos = styled.div`
 `;
 
 const GHCard = styled.div`
-  display: block;
-  padding: 12px;
-  border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
-  border-radius: 5px;
-
   @media (max-width: 768px) {
     width: calc(90vw - 26px);
+  }
+
+  border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
+  border-radius: 5px;
+  padding: 12px;
+
+  &:hover {
+    background-color: var(--green-300);
+    color: var(--black);
+    border-color: rgba(127.5, 127.5, 127.5, 0);
   }
 `;
 
@@ -297,9 +312,15 @@ const Technologies = styled.div`
 
 const Technology = styled.a`
   display: block;
-  padding: 12px;
   border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
   border-radius: 5px;
+  padding: 12px;
+
+  &:hover {
+    background-color: var(--green-300);
+    color: var(--black);
+    border-color: rgba(127.5, 127.5, 127.5, 0);
+  }
 `;
 
 const TechnologyName = styled.h1`
@@ -311,6 +332,40 @@ const TechnologyDesc = styled.p`
   margin: 0 5px;
   opacity: 80%;
 `;
+
+const AboutSection = styled.div`
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const MiniAboutSection = styled.div`
+  padding-bottom: 32px;
+
+  @media (min-width: 1084px) {
+    min-width: 450px;
+  }
+`;
+
+const AboutHeader = styled.h1`
+  font-weight: bold;
+`;
+
+const AboutMe = styled.div`
+  width: 100%;
+  margin: 0 12px;
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
+`;
+
+const AboutBlurb = styled.p``;
 
 export default function Home() {
   return (
@@ -331,7 +386,7 @@ export default function Home() {
         </About>
         <GHRepos>
           {repos.map((repo, id) => (
-            <GHCard key={id}>
+            <GHCard key={id} className="transition">
               <GHTitle>
                 {repo.isFork ? <GoGitBranch /> : <GoRepo />}
                 <GHRepoURL>
@@ -365,7 +420,7 @@ export default function Home() {
         </TechSection>
 
         <Technologies>
-          <Technology href="https://nodejs.org/en/" target="_blank">
+          <Technology href="https://nodejs.org/en/" target="_blank" className="transition">
             <TechnologyName>
               <SiNodedotjs /> Node.js
             </TechnologyName>
@@ -374,7 +429,7 @@ export default function Home() {
               Twitter, and more.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://www.typescriptlang.org/" target="_blank">
+          <Technology href="https://www.typescriptlang.org/" target="_blank" className="transition">
             <TechnologyName>
               <SiTypescript /> TypeScript
             </TechnologyName>
@@ -383,7 +438,7 @@ export default function Home() {
               anywhere.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://reactjs.org/" target="_blank">
+          <Technology href="https://reactjs.org/" target="_blank" className="transition">
             <TechnologyName>
               <SiReact /> React
             </TechnologyName>
@@ -392,7 +447,7 @@ export default function Home() {
               site with it's reusable components and advanced features.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://nextjs.org/" target="_blank">
+          <Technology href="https://nextjs.org/" target="_blank" className="transition">
             <TechnologyName>
               <SiNextdotjs /> Next.js
             </TechnologyName>
@@ -401,7 +456,7 @@ export default function Home() {
               of server side rendering.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://www.postgresql.org/" target="_blank">
+          <Technology href="https://www.postgresql.org/" target="_blank" className="transition">
             <TechnologyName>
               <SiPostgresql /> PostgreSQL
             </TechnologyName>
@@ -409,13 +464,13 @@ export default function Home() {
               A very popular and powerful relational database. That's been tried and tested since 1996.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://www.mongodb.com/" target="_blank">
+          <Technology href="https://www.mongodb.com/" target="_blank" className="transition">
             <TechnologyName>
               <SiMongodb /> MongoDB
             </TechnologyName>
             <TechnologyDesc>A document-based, no-SQL database for modern applications.</TechnologyDesc>
           </Technology>
-          <Technology href="https://deno.land/" target="_blank">
+          <Technology href="https://deno.land/" target="_blank" className="transition">
             <TechnologyName>
               <SiDeno /> Deno
             </TechnologyName>
@@ -424,7 +479,11 @@ export default function Home() {
               engine. It aims to be fully compatible with the browser and uses web imports.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket" target="_blank">
+          <Technology
+            href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket"
+            target="_blank"
+            className="transition"
+          >
             <TechnologyName>
               <BsPlugFill /> Websockets
             </TechnologyName>
@@ -432,8 +491,48 @@ export default function Home() {
               A web standard that allows for instantaneous delivery of data to and from clients and servers.
             </TechnologyDesc>
           </Technology>
+          <Technology href="https://nuxtjs.org/" target="_blank" className="transition">
+            <TechnologyName>
+              <SiNuxtdotjs /> Nuxt.js
+            </TechnologyName>
+            <TechnologyDesc>
+              Like Next.js, but using Vue.js instead of React.js. It also supports SSR and global imports.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://www.raspberrypi.com/" target="_blank" className="transition">
+            <TechnologyName>
+              <SiRaspberrypi /> Raspberry Pi
+            </TechnologyName>
+            <TechnologyDesc>A credit card sized, ARM based computer for low power, mobile computing.</TechnologyDesc>
+          </Technology>
         </Technologies>
       </TechnologiesSection>
+
+      <AboutSection>
+        <MiniAboutSection>
+          <AboutHeader>A bit more about me.</AboutHeader>
+          <AboutBlurb>
+            If you don't care about back story or are bored by big walls of words, you can skip this section.
+          </AboutBlurb>
+        </MiniAboutSection>
+        <AboutMe>
+          <p>
+            Since I got my first computer when I was 12, I always wondered about how computers worked. This lead me down
+            the rabbit hole of writing code. My first real project was a Discord.js bot that was cobbled together from
+            many different tutorials and it had a lot of bugs. It did however, teach me a lot about writing JavaScript
+            and using Node.js.
+          </p>
+          <p>
+            Then I wondered about creating a web dashboard, like a lot of other Discord bots. This got me into using
+            React, and later using MongoDB. This started my web development career. Although that project is long gone
+            into the depths of my GitHub account, it was the starting point for me. And I hope to share what I've
+            learned using this website.
+          </p>
+          <p>
+            I'm always still learning, and I hope to learn more. <em>- Ruben</em>
+          </p>
+        </AboutMe>
+      </AboutSection>
     </>
   );
 }

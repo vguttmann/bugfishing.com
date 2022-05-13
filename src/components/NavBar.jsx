@@ -61,6 +61,7 @@ export default function NavBar() {
       <Brand>Reboot Codes</Brand>
       <Menu>
         <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/contact">Contact</MenuLink>
         <MenuLink to="/blog">Blog</MenuLink>
       </Menu>
     </Header>

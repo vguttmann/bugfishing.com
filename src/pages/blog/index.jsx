@@ -6,8 +6,20 @@ import { api } from '../../lib/lib';
 
 const Posts = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
   gap: 12px;
+  margin: 32px 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: 1084px) {
+    grid-template-columns: auto auto auto;
+  }
+`;
+
+const PostsHeading = styled.h1`
+  font-weight: bold;
 `;
 
 export default function Blog({ articles }) {
@@ -16,6 +28,8 @@ export default function Blog({ articles }) {
       <Head>
         <title>Reboot-Codes: Blog</title>
       </Head>
+      <PostsHeading>Checkout the Blog.</PostsHeading>
+      <p>This is the part that uses MDX, it took a while to get it working. But, it works now!</p>
       <Posts>
         {articles.map((article) => (
           <PostItem key={article.slug} article={article} />
