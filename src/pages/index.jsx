@@ -2,23 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { GoRepo, GoStar, GoGitBranch } from 'react-icons/go';
+import { SiDeno, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiTypescript } from 'react-icons/si';
+import { BsPlugFill } from 'react-icons/bs';
 
-/* import Image from 'next/image';
-
-const ProfilePic = styled.div`
-  width: 100px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  justify-content: end;
-  width: 100%;
-`;
-
-<ProfilePic>
-  <Image src="/profile.png" width="100" height="100" style={{ borderRadius: '9999px' }} />
-</ProfilePic> */
-
-// placeholder
+// placeholder generated from:
+/*
+query MyQuery {
+  user(login: "Reboot-Codes") {
+    repositoriesContributedTo(
+      first: 10
+      contributionTypes: COMMIT
+      includeUserRepositories: true
+      privacy: PUBLIC
+      orderBy: {field: UPDATED_AT, direction: DESC}
+    ) {
+      nodes {
+        name
+        owner {
+          login
+          url
+        }
+        description
+        forkCount
+        url
+        isFork
+        isTemplate
+        stargazerCount
+      }
+    }
+  }
+}
+*/
 const repos = [
   {
     name: 'discordeno',
@@ -155,7 +169,7 @@ const repos = [
 ];
 
 const HeroSection = styled.div`
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -172,6 +186,10 @@ const About = styled.div`
   @media (min-width: 1084px) {
     min-width: 450px;
   }
+`;
+
+const AboutHeading = styled.h1`
+  font-weight: bold;
 `;
 
 const AboutBreak = styled.br`
@@ -233,18 +251,65 @@ const GHDetails = styled.div`
 
 const GHDesc = styled.p`
   font-size: var(--step-down-2);
-  opacity: 40%;
+  opacity: 80%;
   margin: 0 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Section = styled.div`
+const TechnologiesSection = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding-bottom: 12px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const TechSection = styled.div`
+  padding-bottom: 32px;
+
+  @media (min-width: 1084px) {
+    min-width: 450px;
+  }
+`;
+
+const TechHeader = styled.h1`
+  font-weight: bold;
+`;
+
+const TechText = styled.p``;
+
+const Technologies = styled.div`
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 0 12px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const Technology = styled.a`
+  display: block;
+  padding: 12px;
+  border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
+  border-radius: 5px;
+`;
+
+const TechnologyName = styled.h1`
+  font-size: var(--step-up-2);
+`;
+
+const TechnologyDesc = styled.p`
+  margin-top: 10px;
+  margin: 0 5px;
+  opacity: 80%;
 `;
 
 export default function Home() {
@@ -253,14 +318,15 @@ export default function Home() {
       <Head>
         <title>Reboot-Codes: Home</title>
       </Head>
+
       <HeroSection>
         <About>
-          <h1>
+          <AboutHeading>
             Making amazing things with
             <AboutBreak />
             <AboutSpace> </AboutSpace>
             computers since 2019.
-          </h1>
+          </AboutHeading>
           <AboutText>Here are some repo's I've contributed to.</AboutText>
         </About>
         <GHRepos>
@@ -297,6 +363,83 @@ export default function Home() {
           ))}
         </GHRepos>
       </HeroSection>
+
+      <TechnologiesSection>
+        <TechSection>
+          <TechHeader>Tools of the Trade.</TechHeader>
+          <TechText>Here is a comprehensive list of technologies I have used in projects.</TechText>
+        </TechSection>
+
+        <Technologies>
+          <Technology href="https://nodejs.org/en/" target="_blank">
+            <TechnologyName>
+              <SiNodedotjs /> Node.js
+            </TechnologyName>
+            <TechnologyDesc>
+              The first solution to use JavaScript server-side. It powers this site; and many others like Apple,
+              Twitter, and more.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://www.typescriptlang.org/" target="_blank">
+            <TechnologyName>
+              <SiTypescript /> TypeScript
+            </TechnologyName>
+            <TechnologyDesc>
+              My favorite language to write code in. It's type safe and can be compiled into JavaScript to be used
+              anywhere.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://reactjs.org/" target="_blank">
+            <TechnologyName>
+              <SiReact /> React
+            </TechnologyName>
+            <TechnologyDesc>
+              React is a frontend JavaScript library that allows for very flexible and extendable web apps. It runs this
+              site with it's reusable components and advanced features.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://nextjs.org/" target="_blank">
+            <TechnologyName>
+              <SiNextdotjs /> Next.js
+            </TechnologyName>
+            <TechnologyDesc>
+              A framework to use React for high traffic, production web applications. It powers this site with it's use
+              of server side rendering.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://www.postgresql.org/" target="_blank">
+            <TechnologyName>
+              <SiPostgresql /> PostgreSQL
+            </TechnologyName>
+            <TechnologyDesc>
+              A very popular and powerful relational database. That's been tried and tested since 1996.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://www.mongodb.com/" target="_blank">
+            <TechnologyName>
+              <SiMongodb /> MongoDB
+            </TechnologyName>
+            <TechnologyDesc>A document-based, no-SQL database for modern applications.</TechnologyDesc>
+          </Technology>
+          <Technology href="https://deno.land/" target="_blank">
+            <TechnologyName>
+              <SiDeno /> Deno
+            </TechnologyName>
+            <TechnologyDesc>
+              A next generation JavaScript and TypeScript interpreter like Node.js, but written in rust using the V8
+              engine. It aims to be fully compatible with the browser and uses web imports.
+            </TechnologyDesc>
+          </Technology>
+          <Technology href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket" target="_blank">
+            <TechnologyName>
+              <BsPlugFill /> Websockets
+            </TechnologyName>
+            <TechnologyDesc>
+              A web standard that allows for instantaneous delivery of data to and from clients and servers.
+            </TechnologyDesc>
+          </Technology>
+        </Technologies>
+      </TechnologiesSection>
     </>
   );
 }
