@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import dayjs from 'dayjs';
 
 const PostContainer = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ export default function PostItem({ article }) {
         <Header>{article.title}</Header>
         <Text>{article.description}</Text>
         <Text>
-          <span>{article.timeReading.text}</span> • <span>{article.date}</span>
+          <span>{article.timeReading.text}</span> • <span>{dayjs(article.date).format('DD/MM/YYYY')}</span>
         </Text>
       </PostContainer>
     </Link>

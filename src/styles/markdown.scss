@@ -1,13 +1,14 @@
 .md-block {
+  display: grid;
+  gap: 5px;
   p {
     font-weight: normal;
   }
 
   a {
-    color: #6868fa;
+    color: var(--green-300);
   }
   a:hover {
-    color: #6868fa;
     text-decoration: underline;
   }
 

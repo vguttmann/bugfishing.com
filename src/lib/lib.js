@@ -2,6 +2,7 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import dayjs from 'dayjs';
 
 const articlesDirectory = join(process.cwd(), 'src/posts');
 
@@ -41,7 +42,7 @@ function getArticleBySlug(slug, fields = []) {
 function getAllArticles(fields = []) {
   return getAllSlugs()
     .map((slug) => getArticleBySlug(slug, fields))
-    .sort((article1, article2) => (article1.date > article2.date ? -1 : 1));
+    .sort((article1, article2) => (dayjs(article1.date).valueOf() > dayjs(article2.date).valueOf() ? -1 : 1));
 }
 
 function getArticlesByTag(tag, fields = []) {

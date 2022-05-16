@@ -34,9 +34,13 @@
     "remark-autolink-headings": "^7.0.1",
     "remark-capitalize": "^1.1.0",
     "remark-code-titles": "^0.1.2",
+    "remark-gemoji": "^7.0.1",
+    "remark-gfm": "^3.0.1",
     "remark-images": "^3.1.0",
     "remark-slug": "^7.0.1",
-    "styled-components": "^5.3.5"
+    "remark-twemoji": "^0.1.1",
+    "styled-components": "^5.3.5",
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.7.0",
