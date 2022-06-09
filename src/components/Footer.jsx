@@ -9,6 +9,7 @@ const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100px;
+  margin-top: 12px;
   border-top 1px solid var(--color);
   padding-top: 12px;
 `;
@@ -66,7 +67,7 @@ const BreadCrumb = ({ to, children }) => (
     height: 25px;
     border-radius: 9999px;
     border: none;
-    background-color: var(--green-300);
+    background-color: var(--brand-300);
     color: var(--black);
     font-size: var(--step-up-3);
   `;
@@ -95,7 +96,7 @@ const SocialButton = styled.a`
   margin-right: 5px;
 
   &:hover {
-    background-color: var(--green-300);
+    background-color: var(--brand-300);
     color: var(--black);
   }
 `;

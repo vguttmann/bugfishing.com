@@ -10,11 +10,11 @@ const Posts = styled.div`
   margin: 32px 0;
 
   @media (min-width: 768px) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: 1084px) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 

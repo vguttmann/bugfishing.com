@@ -7,10 +7,25 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80ch;
+  width: 80ch;
+  text-align: left;
+  font-size: var(--step-up-2);
+
+  @media (max-width: 80ch) {
+    width: 100%;
+  }
+`;
+
 const Post = ({ readingTime, title, description, date, ogImage, content }) => (
   <Container>
     <Header readingTime={readingTime} title={title} description={description} date={date} ogImage={ogImage} />
-    <Container className="md-block">{content}</Container>
+    <Content className="md-block">{content}</Content>
   </Container>
 );
 

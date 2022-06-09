@@ -244,7 +244,7 @@ const GHCard = styled.div`
   padding: 12px;
 
   &:hover {
-    background-color: var(--green-300);
+    background-color: var(--brand-300);
     color: var(--black);
     border-color: rgba(127.5, 127.5, 127.5, 0);
   }
@@ -317,7 +317,7 @@ const Technology = styled.a`
   padding: 12px;
 
   &:hover {
-    background-color: var(--green-300);
+    background-color: var(--brand-300);
     color: var(--black);
     border-color: rgba(127.5, 127.5, 127.5, 0);
   }
