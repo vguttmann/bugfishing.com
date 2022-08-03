@@ -1,8 +1,15 @@
+:root {
+  --markdown-content-gap: 5px;
+  --markdown-p-pb-raw: 25px;
+  --markdown-p-pb: calc(var(--markdown-p-pb-raw) - var(--markdown-content-gap));
+}
+
 .md-block {
   display: grid;
-  gap: 5px;
+  gap: --markdown-content-gap;
   p {
     font-weight: normal;
+    margin-bottom: var(--markdown-p-pb);
   }
 
   a {
@@ -35,5 +42,12 @@
   h6 {
     font-size: var(--step-up-1);
     font-weight: bold;
+  }
+
+  ol,
+  ul {
+    list-style: initial;
+    list-style-position: outside;
+    padding-bottom: var(--markdown-p-pb);
   }
 }

@@ -15,7 +15,7 @@ const Content = styled.div`
   max-width: 80ch;
   width: 80ch;
   text-align: left;
-  font-size: var(--step-up-2);
+  font-size: var(--step-up-1);
 
   @media (max-width: 80ch) {
     width: 100%;
