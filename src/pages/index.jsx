@@ -55,7 +55,7 @@ const repos = [
     url: 'https://github.com/discordeno/discordeno',
     isFork: false,
     isTemplate: false,
-    stargazerCount: 472
+    stargazerCount: 526
   },
   {
     name: 'denologger',
@@ -97,17 +97,16 @@ const repos = [
     stargazerCount: 1
   },
   {
-    name: 'create-discordeno-bot-node',
+    name: 'open-car',
     owner: {
       login: 'Reboot-Codes',
       url: 'https://github.com/Reboot-Codes'
     },
-    description: 'A quick CLI to create a Discordeno Bot.',
-    forkCount: 0,
-    url: 'https://github.com/Reboot-Codes/create-discordeno-bot-node',
+    description: 'An open and free car operating system.',
+    url: 'https://github.com/Reboot-Codes/open-car',
     isFork: false,
     isTemplate: false,
-    stargazerCount: 0
+    stargazerCount: 1
   },
   {
     name: 'template',

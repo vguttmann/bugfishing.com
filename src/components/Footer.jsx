@@ -102,9 +102,7 @@ const SocialButton = styled.a`
 `;
 
 const TechLink = styled.a`
-  &:hover {
-    border-bottom: 1px solid var(--color);
-  }
+  text-decoration: underline;
 `;
 
 export default function Footer() {
@@ -140,42 +138,36 @@ export default function Footer() {
         <FooterSection>
           <p>
             I think it's interesting to know what powers a site! Speaking of, this site was statically generated with{' '}
-            <TechLink href="https://nextjs.org" target="_blank" className="transition">
+            <TechLink href="https://nextjs.org" target="_blank">
               Next.js
             </TechLink>{' '}
             and styled with{' '}
-            <TechLink href="https://styled-components.com/" target="_blank" className="transition">
+            <TechLink href="https://styled-components.com/" target="_blank">
               Styled Components
             </TechLink>{' '}
             and{' '}
-            <TechLink href="https://sass-lang.com/" target="_blank" className="transition">
+            <TechLink href="https://sass-lang.com/" target="_blank">
               SCSS
             </TechLink>
             . All posts were written with{' '}
-            <TechLink href="https://mdxjs.com/" target="_blank" className="transition">
+            <TechLink href="https://mdxjs.com/" target="_blank">
               MDX
             </TechLink>
             . Amazingly hosted on{' '}
-            <TechLink href="https://www.netlify.com/" target="_blank" className="transition">
-              Netlify
+            <TechLink href="https://www.heroku.com/" target="_blank">
+              Heroku
+            </TechLink>{' '}
+            and cached by{' '}
+            <TechLink href="https://www.cloudflare.com/" target="_blank">
+              CloudFlare
             </TechLink>
             .
           </p>
           <Socials>
-            <SocialButton
-              className="transition"
-              href="https://github.com/Reboot-Codes"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <SocialButton href="https://github.com/Reboot-Codes" target="_blank" rel="noopener noreferrer">
               <BsGithub /> GitHub
             </SocialButton>
-            <SocialButton
-              className="transition"
-              href="https://github.com/Reboot-Codes/website"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <SocialButton href="https://github.com/Reboot-Codes/website" target="_blank" rel="noopener noreferrer">
               <BsCodeSquare /> Source
             </SocialButton>
           </Socials>
