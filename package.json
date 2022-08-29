@@ -2,7 +2,7 @@
   "name": "website",
   "version": "1.0.0",
   "description": "My website, made with Next.js, SSR, and MDX.",
-  "author": "Reboot-Codes",
+  "author": "Reboot-Codes <git@reboot-codes.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

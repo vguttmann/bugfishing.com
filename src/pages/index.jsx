@@ -11,7 +11,8 @@ import {
   SiReact,
   SiTypescript,
   SiRaspberrypi,
-  SiNuxtdotjs
+  SiNuxtdotjs,
+  SiRedis
 } from 'react-icons/si';
 import { BsPlugFill } from 'react-icons/bs';
 
@@ -460,7 +461,7 @@ export default function Home() {
               <SiPostgresql /> PostgreSQL
             </TechnologyName>
             <TechnologyDesc>
-              A very popular and powerful relational database. That's been tried and tested since 1996.
+              A very popular and powerful relational database, that's been tried and tested since 1996.
             </TechnologyDesc>
           </Technology>
           <Technology href="https://www.mongodb.com/" target="_blank" className="transition">
@@ -475,7 +476,7 @@ export default function Home() {
             </TechnologyName>
             <TechnologyDesc>
               A next generation JavaScript and TypeScript interpreter like Node.js, but written in rust using the V8
-              engine. It aims to be fully compatible with the browser and uses web imports.
+              engine. It aims to be fully compatible with browsers and Node.
             </TechnologyDesc>
           </Technology>
           <Technology
@@ -490,12 +491,12 @@ export default function Home() {
               A web standard that allows for instantaneous delivery of data to and from clients and servers.
             </TechnologyDesc>
           </Technology>
-          <Technology href="https://nuxtjs.org/" target="_blank" className="transition">
+          <Technology href="https://redis.io/" target="_blank" className="transition">
             <TechnologyName>
-              <SiNuxtdotjs /> Nuxt.js
+              <SiRedis /> Redis
             </TechnologyName>
             <TechnologyDesc>
-              Like Next.js, but using Vue.js instead of React.js. It also supports SSR and global imports.
+              A fast, extendable, in memory, database. Mainly used as a cache; but can be used as a primary database.
             </TechnologyDesc>
           </Technology>
           <Technology href="https://www.raspberrypi.com/" target="_blank" className="transition">
