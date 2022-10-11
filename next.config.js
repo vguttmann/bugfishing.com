@@ -26,6 +26,7 @@ module.exports = {
   reactStrictMode: false,
   // Due to the way that GH pages works, we can't use Next.js optimized images.
   images: {
-    unoptimized: true,
-  },
+    loader: 'akamai',
+    path: ''
+  }
 };

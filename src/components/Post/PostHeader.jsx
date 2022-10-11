@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsCalendar } from 'react-icons/bs';
+import Image from 'next/image';
 
 const Header = styled.div`
   width: 100%;
@@ -72,7 +73,7 @@ const PostHeader = ({ title, description, date, ogImage }) => {
       <Description>{description ? description : <></>}</Description>
       {ogImage ? (
         <PostImage>
-          <img src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
+          <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
         </PostImage>
       ) : (
         <></>
