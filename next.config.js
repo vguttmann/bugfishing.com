@@ -23,5 +23,9 @@ module.exports = {
     return config;
   },
   experimental: { images: { layoutRaw: true } },
-  reactStrictMode: false
+  reactStrictMode: false,
+  // Due to the way that GH pages works, we can't use Next.js optimized images.
+  images: {
+    unoptimized: true,
+  },
 };
