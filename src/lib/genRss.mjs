@@ -20,7 +20,7 @@ function buildFeed(posts) {
             pubDate: new Date(post.date).toUTCString()
           },
           {
-            guid: [{ _attr: { isPermaLink: true } }, `${SITE}/blog/${post.slug}/`]
+            guid: [{ _attr: { isPermaLink: true } }, `${SITE}/blog/${post.slug}`]
           },
           {
             description: {
