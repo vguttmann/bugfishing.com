@@ -4,9 +4,12 @@
   "description": "My website, made with Next.js, SSR, and MDX.",
   "author": "Reboot-Codes <git@reboot-codes.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build-site": "next build",
+    "post-build": "node ./src/lib/genRss.js",
+    "build": "yarn build-site && yarn post-build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
@@ -14,6 +17,7 @@
   "private": true,
   "dependencies": {
     "@next/mdx": "^12.1.4",
+    "cheerio": "^1.0.0-rc.12",
     "date-fns": "^2.28.0",
     "dayjs": "^1.11.0",
     "glob": "^7.2.0",
@@ -38,7 +42,8 @@
     "remark-images": "^3.1.0",
     "remark-slug": "^7.0.1",
     "styled-components": "^5.3.5",
-    "webp-loader": "^0.6.0"
+    "webp-loader": "^0.6.0",
+    "xml": "^1.0.1"
   },
   "devDependencies": {
     "husky": "^7.0.4",

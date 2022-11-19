@@ -1,12 +1,12 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import NextApp from 'next/app';
 // Syntax highlighting for posts
 import Prism from 'prismjs';
 // Global Components
 import NavBar from '../components/NavBar';
 import Page from '../components/Page';
-const Footer = dynamic(() => import('../components/Footer'), { ssr: false });
+import Footer from '../components/Footer';
 // Global Styles and Stuff
 import '../styles/globals.scss';
 

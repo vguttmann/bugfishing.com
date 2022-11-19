@@ -22,6 +22,10 @@ const PostsHeading = styled.h1`
   font-weight: bold;
 `;
 
+const RSSLink = styled.a`
+  text-decoration: underline;
+`;
+
 export default function Blog({ articles }) {
   return (
     <>
@@ -29,7 +33,12 @@ export default function Blog({ articles }) {
         <title>Reboot-Codes: Blog</title>
       </Head>
       <PostsHeading>Checkout the Blog.</PostsHeading>
-      <p>This is the part that uses MDX, it took a while to get it working. But, it works now!</p>
+      <p>
+        This is the part that uses MDX, it took a while to get it working. But, it works now!{' '}
+        <RSSLink href="/feed.rss" target="_blank">
+          Here's a link to the RSS feed.
+        </RSSLink>
+      </p>
       <Posts>
         {articles.map((article) => (
           <PostItem key={article.slug} article={article} />

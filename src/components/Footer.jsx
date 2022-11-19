@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
-import { BsGithub, BsCodeSquare } from 'react-icons/bs';
+import { BsGithub, BsCodeSquare, BsRssFill } from 'react-icons/bs';
 
 const FooterDiv = styled.div`
   max-width: 90vw;
@@ -10,7 +10,7 @@ const FooterDiv = styled.div`
   flex-direction: column;
   min-height: 100px;
   margin-top: 12px;
-  border-top 1px solid var(--color);
+  border-top: 1px solid var(--color);
   padding-top: 12px;
 `;
 
@@ -85,7 +85,6 @@ const Socials = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  item-align: center;
   justify-content: center;
 `;
 
@@ -107,19 +106,23 @@ const TechLink = styled.a`
 
 export default function Footer() {
   const year = dayjs().get('year');
-  let tos = [];
-  let arr = window.location.pathname.split('/');
-  window.location.pathname.split('/').map((part, id, arr) => {
-    if (id != 0) {
-      tos.push([
-        `${
-          arr.slice(1, id).join('/') == '' ? '/' + arr.slice(1, id).join('/') : '/' + arr.slice(1, id).join('/') + '/'
-        }${part}`,
-        part
-      ]);
-    } else {
-      tos.push(['/', 'root']);
-    }
+  const [tos, setTos] = React.useState([]);
+  React.useEffect(() => {
+    const tosProto = [];
+    window.location.pathname.split('/').map((part, id, arr) => {
+      if (id != 0) {
+        tosProto.push([
+          `${
+            arr.slice(1, id).join('/') == '' ? '/' + arr.slice(1, id).join('/') : '/' + arr.slice(1, id).join('/') + '/'
+          }${part}`,
+          part
+        ]);
+      } else {
+        tosProto.push(['/', 'root']);
+      }
+    });
+
+    setTos(tosProto);
   });
   return (
     <FooterDiv>
@@ -154,8 +157,8 @@ export default function Footer() {
               MDX
             </TechLink>
             . Amazingly hosted on{' '}
-            <TechLink href="https://www.heroku.com/" target="_blank">
-              Heroku
+            <TechLink href="https://pages.github.com/" target="_blank">
+              GitHub Pages
             </TechLink>{' '}
             and cached by{' '}
             <TechLink href="https://www.cloudflare.com/" target="_blank">
@@ -169,6 +172,9 @@ export default function Footer() {
             </SocialButton>
             <SocialButton href="https://github.com/Reboot-Codes/website" target="_blank" rel="noopener noreferrer">
               <BsCodeSquare /> Source
+            </SocialButton>
+            <SocialButton href="/feed.rss" target="_blank">
+              <BsRssFill /> RSS Feed
             </SocialButton>
           </Socials>
         </FooterSection>
