@@ -4,7 +4,6 @@
   "description": "My website, made with Next.js, SSR, and MDX.",
   "author": "Reboot-Codes <git@reboot-codes.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build-site": "next build",
