@@ -19,6 +19,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <a rel="me" href="https://mastodon.social/@reboothasmastodon"></a>
       </Head>
       <NavBar />
       <Page>
