@@ -77,7 +77,7 @@ export default function Contact() {
             <p>Ah, that bird platform with the crazy rich people.</p>
           </Method>
           <Method className="transition" rel="me" href="https://mastodon.social/@reboothasmastodon">
-            <h1>Using Mastodon</h1>
+            <h1>Using Mastodon...</h1>
             <p>Like bird platform, but more open.</p>
           </Method>
           <Method className="transition" href="https://github.com/Reboot-Codes" target="_blank">
