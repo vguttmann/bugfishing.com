@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build-site": "next build",
-    "post-build": "node ./src/lib/genRss.js",
+    "post-build": "node ./src/lib/genRss.mjs",
     "build": "yarn build-site && yarn post-build",
     "start": "next start",
     "lint": "next lint",

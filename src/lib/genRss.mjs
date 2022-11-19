@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { api } from './lib.js';
+import { api } from './lib.mjs';
 import xml from 'xml';
 
 const SITE = 'https://www.reboot-codes.com';
