@@ -7,6 +7,8 @@
 .md-block {
   display: grid;
   gap: --markdown-content-gap;
+  line-height: 1.5;
+
   p {
     font-weight: normal;
     margin-bottom: var(--markdown-p-pb);

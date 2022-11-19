@@ -133,7 +133,7 @@ export default function Footer() {
             {tos.map((to, id) => (
               <BreadCrumb key={id} to={to[0]}>
                 {to[0] === '/' ? '' : '/ '}
-                {to[1]}{' '}
+                {to[1].split('-').join(' ')}{' '}
               </BreadCrumb>
             ))}
           </BreadCrumbs>
