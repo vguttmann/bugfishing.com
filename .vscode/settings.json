@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["llog", "Nuxtdotjs", "prismjs", "Raspberrypi", "rehype"]
+  "cSpell.words": ["llog", "Nuxtdotjs", "prismjs", "Raspberrypi", "rehype"],
+  "files.associations": {
+    "*.yaml": "home-assistant"
+  }
 }

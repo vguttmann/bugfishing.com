@@ -12,6 +12,7 @@
     "build": "yarn build-site && yarn post-build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "prepare": "husky install"
   },
   "private": true,
