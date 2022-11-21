@@ -11,7 +11,6 @@ import {
   SiReact,
   SiTypescript,
   SiRaspberrypi,
-  SiNuxtdotjs,
   SiRedis
 } from 'react-icons/si';
 import { BsPlugFill } from 'react-icons/bs';

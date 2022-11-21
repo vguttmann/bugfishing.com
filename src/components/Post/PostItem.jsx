@@ -41,13 +41,13 @@ export default function PostItem({ article }) {
   return (
     <Link as={`/blog/${article.slug}`} href="/blog/[slug]">
       <PostContainer>
-        {imageUrl ? (
+        {/*imageUrl ? (
           <PostImage>
             <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
           </PostImage>
         ) : (
           <></>
-        )}
+        )*/}
         <Header>{article.title}</Header>
         <Text>{article.description}</Text>
         <Text>

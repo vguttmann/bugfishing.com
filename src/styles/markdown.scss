@@ -9,6 +9,12 @@
   gap: --markdown-content-gap;
   line-height: 1.5;
 
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: var(--color);
+  }
+
   p {
     font-weight: normal;
     margin-bottom: var(--markdown-p-pb);

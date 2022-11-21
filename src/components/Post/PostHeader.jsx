@@ -13,14 +13,17 @@ const Header = styled.div`
 const Meta = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  items-align: center;
+
+  @media (min-width: 834px) {
+    flex-direction: row;
+  }
 `;
 
 const MetaData = styled.span`
   padding-right: 12px;
+  line-height: 1.5;
 `;
 
 const Description = styled.p`
@@ -71,9 +74,9 @@ const PostHeader = ({ title, description, date, ogImage }) => {
         )}
       </Meta>
       <Description>{description ? description : <></>}</Description>
-      {ogImage ? (
+      {imageUrl ? (
         <PostImage>
-          <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
+          <Image src={'/' + imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />
         </PostImage>
       ) : (
         <></>

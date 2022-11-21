@@ -24,8 +24,10 @@ const Content = styled.div`
 
 const Post = ({ readingTime, title, description, date, ogImage, content }) => (
   <Container>
-    <Header readingTime={readingTime} title={title} description={description} date={date} ogImage={ogImage} />
-    <Content className="md-block">{content}</Content>
+    <Content className="md-block">
+      <Header readingTime={readingTime} title={title} description={description} date={date} ogImage={ogImage} />
+      {content}
+    </Content>
   </Container>
 );
 

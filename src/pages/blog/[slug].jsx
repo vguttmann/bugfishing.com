@@ -12,10 +12,23 @@ import { api } from '../../lib/lib';
 
 export default function Slug({ readingTime, frontMatter, slug, source }) {
   const content = hydrate(source);
+  const ogObj = frontMatter.ogImage
+    ? frontMatter.ogImage.url
+      ? {
+          images: [
+            {
+              url: `https://www.reboot-codes.com${
+                frontMatter.ogImage.url.startsWith('/') ? frontMatter.ogImage.url : `/${frontMatter.ogImage.url}`
+              }`
+            }
+          ]
+        }
+      : undefined
+    : undefined;
 
   return (
     <div>
-      <NextSeo title={`Reboot-Codes: Blog: ${frontMatter.title}`} description={frontMatter.description} />
+      <NextSeo title={`Reboot's Blog: ${frontMatter.title}`} description={frontMatter.description} openGraph={ogObj} />
       <Post
         readingTime={readingTime}
         title={frontMatter.title}

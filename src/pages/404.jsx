@@ -42,7 +42,7 @@ const NotFoundStyle = styled.div`
 
 const NotFound = () => (
   <NotFoundStyle>
-    <Image src="/NotFound.svg" alt="404 Icon" lazy="loading" layout="fill" objectFit="contain" />
+    <Image src="//NotFound.svg" alt="404 Icon" lazy="loading" layout="fill" objectFit="contain" />
   </NotFoundStyle>
 );
 

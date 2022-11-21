@@ -13,21 +13,33 @@ function buildFeed(posts) {
 
   feedItems.push(
     ...sortedPosts.map(function (post) {
-      const feedItem = {
-        item: [
-          { title: post.title },
-          {
-            pubDate: new Date(post.date).toUTCString()
-          },
-          {
-            guid: [{ _attr: { isPermaLink: true } }, `${SITE}/blog/${post.slug}`]
-          },
-          {
-            description: {
-              _cdata: post.content
-            }
+      const item = [
+        { title: post.title },
+        {
+          pubDate: new Date(post.date).toUTCString()
+        },
+        {
+          guid: [{ _attr: { isPermaLink: true } }, `${SITE}/blog/${post.slug}`]
+        },
+        {
+          description: {
+            _cdata: post.content
           }
-        ]
+        }
+      ];
+      if (post.ogImage && post.ogImage.url) {
+        item.push({
+          image: [
+            {
+              link: `https://www.reboot-codes.com${
+                post.ogImage.url.startsWith('/') ? post.ogImage.url : `/${post.ogImage.url}`
+              }`
+            }
+          ]
+        });
+      }
+      const feedItem = {
+        item
       };
       return feedItem;
     })
