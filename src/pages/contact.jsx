@@ -76,7 +76,7 @@ export default function Contact() {
             <h1>Using Twitter...</h1>
             <p>Ah, that bird platform with the crazy rich people.</p>
           </Method>
-          <Method className="transition" rel="me" href="https://mastodon.social/@reboothasmastodon">
+          <Method className="transition" rel="me" href="https://tiggi.es/@reboot">
             <h1>Using Mastodon...</h1>
             <p>Like bird platform, but more open.</p>
           </Method>
