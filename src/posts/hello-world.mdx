@@ -1,24 +1,37 @@
 ---
 title: 'Hello World'
-description: 'Yet another blog, this time, by Reboot.'
-date: '2022-05-16T00:00:00-07:00'
+description: 'Yet another blog, this time by Bugfish03.'
+date: '2023-01-09T00:00:00-07:00'
 slug: 'hello-world'
 ---
 
-Hello there, and welcome to my blog.
-
-It took a while to get this set up, and it finally works the way that I want it to.
+Hey there!
+I'm (Bugfish03)[https://twitter.com/], although I also go by (vguttmann)[https://github.com/vguttmann] and a few other names.
 
 ## How I created this
 
-This stite, as you might have noticed in the footer, is powered by Next.js. It's hosted on Netlify, but that isn't important at the moment.
+After coming across (reboot-Codes)[https://github.com/reboot-codes] on Twitter with a post about their website, I decided to check it out, and liked the simplicity.
 
-All of the posts are located in the `src/posts` directory. Then I leverage the SSR part of Next.js to create paths for all of the posts automatically. Most of the hard work is done by a `lib.js` file in the `src/lib` directory. This file contails utility functions that allow Next.js to find, read, and organize all of the posts. Then a `[slug].jsx` file in the `src/pages/blog` directory generates the page for each post. With an `index.jsx` file in the `src/pages/blog` directory which generates the page that shows each post in chronological order. (Since the date is described in ISO 8601, the [Day.js](https://day.js.org/) library can parse it automatically and return a unix timestamp to compare with. E.g. `2022-05-16T00:00:00-07:00 => 16/05/2022`) Everything else is statically defined in `src/pages` or `src/components`. ✨
+After talking to them, I forked this project, and I'll try to get it running with the website hosted on my personal server instead of Github pages, and then also have Cloudflare cache it.
+
 
 ## Why I created this
 
-I love sharing knowledge about creating just about anything. And I hope that I can share the skills and information that I learn here. I also wanted to have a nice digital portfolio and a home page for my (future) domain.
+I have a few projects in the pipeline which I want to document because there really isn't much documentation for them out there (like my upcoming PS3 project), but just making Twitter threads is kind of awful if you actually want to follow along.
 
-## In the future
+So, a personal website it was. That also did fit perfectly with my wish to delve a bit more into web hosting and stuff, and with the wish to have my own, *proper* server at home.
 
-This will hopefully be a useful source of information for those wanting to use or re-create my projects. It was built to be extensible and multifunctional. And I hope it evolves with me throughout the years. I hope you enjoy it and find it useful or entertaining.
+If everything goes to plan, this site will be hosted on an HP Gen8 Microserver in a Proxmox VM.
+
+
+## What's up next?
+
+As I mentioned, I do have a few projects in the pipeline:
+ - Setting up the PS3 toolchain and porting Tensorflow or PyTorch to the Cell Broadband Engine
+ - Building a (MikroLeo Microcomputer)[https://github.com/edson-acordi/4bit-microcomputer]
+ - Adding a "projects" page to help others keep track of my projects, this will probably be done together with reboot-codes
+ - A few more Home Assistant things
+ - A lyrics display for Spotify that can run alongside Librespot
+ - Some sort of black box that takes in a music stream and control the aRGB LEDs in my room
+ - completing the Python interface library for my oscilloscope
+ - Building an Arduino module that allows me to control a few functions with a foot pedal
