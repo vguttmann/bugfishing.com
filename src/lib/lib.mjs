@@ -47,7 +47,7 @@ function getAllArticles(fields = []) {
 
 function getArticlesByTag(tag, fields = []) {
   return getAllArticles(fields).filter((article) => {
-    const tags = article.tags ?? [];
+    const tags = article.tags == undefined ? [] : article.tags;
     return tags.includes(tag);
   });
 }
