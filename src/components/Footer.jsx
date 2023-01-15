@@ -105,38 +105,43 @@ const TechLink = styled.a`
 `;
 
 export default function Footer() {
+  //const router = useRouter();
   const year = dayjs().get('year');
-  const [tos, setTos] = React.useState([]);
+  /*const [tos, setTos] = React.useState(<></>);
   React.useEffect(() => {
-    const tosProto = [];
-    window.location.pathname.split('/').map((part, id, arr) => {
-      if (id != 0) {
-        tosProto.push([
-          `${
-            arr.slice(1, id).join('/') == '' ? '/' + arr.slice(1, id).join('/') : '/' + arr.slice(1, id).join('/') + '/'
-          }${part}`,
-          part
-        ]);
-      } else {
-        tosProto.push(['/', 'root']);
-      }
-    });
+    if (router) {
+      const tosProto = [];
+      router.asPath.split('/').map((part, id, arr) => {
+        if (id != 0) {
+          tosProto.push([
+            `${
+              arr.slice(1, id).join('/') == '' ? '/' + arr.slice(1, id).join('/') : '/' + arr.slice(1, id).join('/') + '/'
+            }${part}`,
+            part
+          ]);
+        } else {
+          tosProto.push(['/', 'root']);
+        }
+      }, [router]);
 
-    setTos(tosProto);
-  });
+      const breadcrumb = (<BreadCrumbs>{tosProto.map((to, id) => (
+        <BreadCrumb key={id} to={to[0]}>
+          {to[0] === '/' ? '' : '/ '}
+          {to[1].split('-').join(' ')}{' '}
+        </BreadCrumb>
+      ))}</BreadCrumbs>)
+
+      setTos(breadcrumb);
+    }
+  });*/
+
   return (
     <FooterDiv>
       <FooterMain>
         <FooterSection>
-          <Header>Hallo World!</Header>
-          <BreadCrumbs>
-            {tos.map((to, id) => (
-              <BreadCrumb key={id} to={to[0]}>
-                {to[0] === '/' ? '' : '/ '}
-                {to[1].split('-').join(' ')}{' '}
-              </BreadCrumb>
-            ))}
-          </BreadCrumbs>
+          <Header>Hallo Welt!</Header>
+          <p>Hello World in German.</p>
+          {/*tos*/}
         </FooterSection>
         <FooterSection>
           <p>
