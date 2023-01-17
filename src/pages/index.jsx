@@ -321,7 +321,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Home</title>
+        <title>vguttmann: Home</title>
       </Head>
 
       <HeroSection>

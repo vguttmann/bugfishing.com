@@ -30,9 +30,9 @@ export default function Blog({ articles }) {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Blog</title>
+        <title>vguttmann's Blog</title>
       </Head>
-      <PostsHeading>Checkout the Blog.</PostsHeading>
+      <PostsHeading>Check out the Blog.</PostsHeading>
       <p>
         This is the part that uses MDX, it took a while to get it working. But, it works now!{' '}
         <RSSLink href="/feed.rss" target="_blank">

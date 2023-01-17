@@ -68,7 +68,7 @@ export default function Contact() {
             <h1>Using Email...</h1>
             <p>A tried and true (to the golden age of self-hosted websites) method of communication.</p>
           </Method>
-          <Method className="transition" href="https://twitter.com/reboot_hasstuff" target="_blank">
+          <Method className="transition" href="https://twitter.com/bugfish03" target="_blank">
             <h1>Using Twitter...</h1>
             <p>Ah, that bird platform with the crazy, rich and unhinged people.</p>
           </Method>

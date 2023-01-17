@@ -58,7 +58,7 @@ const MenuLink = ({ to, children }) => (
 export default function NavBar() {
   return (
     <Header>
-      <Brand>Reboot Codes</Brand>
+      <Brand>vguttmann</Brand>
       <Menu>
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/contact">Contact</MenuLink>

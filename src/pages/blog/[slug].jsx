@@ -17,7 +17,7 @@ export default function Slug({ readingTime, frontMatter, slug, source }) {
       ? {
           images: [
             {
-              url: `https://www.reboot-codes.com${
+              url: `https://www.bugfishing.com${
                 frontMatter.ogImage.url.startsWith('/') ? frontMatter.ogImage.url : `/${frontMatter.ogImage.url}`
               }`
             }
@@ -28,7 +28,11 @@ export default function Slug({ readingTime, frontMatter, slug, source }) {
 
   return (
     <div>
-      <NextSeo title={`Reboot's Blog: ${frontMatter.title}`} description={frontMatter.description} openGraph={ogObj} />
+      <NextSeo
+        title={`vincentg's Blog: ${frontMatter.title}`}
+        description={frontMatter.description}
+        openGraph={ogObj}
+      />
       <Post
         readingTime={readingTime}
         title={frontMatter.title}

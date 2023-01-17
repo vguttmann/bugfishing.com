@@ -19,8 +19,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
-        <a rel="me" href="https://mastodon.social/@reboothasmastodon"></a>
-        <a rel="me" href="https://tiggi.es/@reboot"></a>
+        <a rel="me" href="https://twitter.com/bugfish03"></a>
       </Head>
       <NavBar />
       <Page>
