@@ -64,23 +64,15 @@ export default function Contact() {
           </p>
         </SideSection>
         <Content>
-          <Method className="transition" href="mailto:hello@reboot-codes.com" target="_blank">
+          <Method className="transition" href="mailto:hello@bugfishing.com" target="_blank">
             <h1>Using Email...</h1>
             <p>A tried and true (to the golden age of self-hosted websites) method of communication.</p>
           </Method>
-          <Method className="transition" href="https://matrix.to/#/@reboot-hasmatrix:matrix.org" target="_blank">
-            <h1>Using Matrix...</h1>
-            <p>A new way of instant messaging, quite similar to email actually.</p>
-          </Method>
           <Method className="transition" href="https://twitter.com/reboot_hasstuff" target="_blank">
             <h1>Using Twitter...</h1>
-            <p>Ah, that bird platform with the crazy rich people.</p>
+            <p>Ah, that bird platform with the crazy, rich and unhinged people.</p>
           </Method>
-          <Method className="transition" rel="me" href="https://tiggi.es/@reboot">
-            <h1>Using Mastodon...</h1>
-            <p>Like bird platform, but more open.</p>
-          </Method>
-          <Method className="transition" href="https://github.com/Reboot-Codes" target="_blank">
+          <Method className="transition" href="https://github.com/vguttmann" target="_blank">
             <h1>Using GitHub...</h1>
             <p>Not really a way to contact me, but you might just want to checkout the source for something.</p>
           </Method>
