@@ -2,17 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { GoRepo, GoStar, GoGitBranch } from 'react-icons/go';
-import {
-  SiDeno,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiReact,
-  SiTypescript,
-  SiRaspberrypi,
-  SiRedis
-} from 'react-icons/si';
+import { SiArduino, SiRust, SiNextdotjs, SiNodedotjs, SiFlutter, SiReact, SiDart, SiRaspberrypi } from 'react-icons/si';
 import { BsPlugFill } from 'react-icons/bs';
 
 // placeholder generated from:
@@ -376,7 +366,7 @@ export default function Home() {
       <TechnologiesSection>
         <TechSection>
           <TechHeader>Tools of the Trade.</TechHeader>
-          <TechText>Here is a comprehensive list of technologies I have used in projects.</TechText>
+          <TechText>Here is a nonexhaustive list of technologies I have used in projects.</TechText>
         </TechSection>
 
         <Technologies>
@@ -391,9 +381,8 @@ export default function Home() {
           </Technology>
           <Technology href="https://www.dart.dev/" target="_blank" className="transition">
             <TechnologyName>
-              <SiTypescript /> Dart
+              <SiDart /> Dart
             </TechnologyName>
-            x
             <TechnologyDesc>
               One of my favorite language to write code in. It's type safe and can be compiled into JavaScript to be
               used anywhere.
@@ -419,7 +408,7 @@ export default function Home() {
           </Technology>
           <Technology href="https://www.flutter.dev/" target="_blank" className="transition">
             <TechnologyName>
-              <SiPostgresql /> Flutter
+              <SiFlutter /> Flutter
             </TechnologyName>
             <TechnologyDesc>
               Together with the Dart programming language, Flutter is a tpye and null-safe framework that can compile to
@@ -428,7 +417,7 @@ export default function Home() {
           </Technology>
           <Technology href="https://www.rust-lang.org/" target="_blank" className="transition">
             <TechnologyName>
-              <SiMongodb /> Rust
+              <SiRust /> Rust
             </TechnologyName>
             <TechnologyDesc>
               A blazingly fast language that's type, memory and thread safe thanks to a few novel approaches. And by far
@@ -437,16 +426,14 @@ export default function Home() {
           </Technology>
           <Technology href="https://arduino.cc/" target="_blank" className="transition">
             <TechnologyName>
-              <SiDeno /> Arduino
+              <SiArduino /> Arduino
             </TechnologyName>
             <TechnologyDesc>
               When a using Raspberry Pi is bringing a sledgehammer to crack a nut, an Arudino is the perfect candidate..
             </TechnologyDesc>
           </Technology>
           <Technology href="https://kicad.org/" target="_blank" className="transition">
-            <TechnologyName>
-              <SiRedis /> KiCad
-            </TechnologyName>
+            <TechnologyName>KiCad</TechnologyName>
             <TechnologyDesc>An open-source EDA-Suite for designing circuit diagrams and PCBs.</TechnologyDesc>
           </Technology>
           <Technology href="https://www.raspberrypi.com/" target="_blank" className="transition">
