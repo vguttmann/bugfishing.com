@@ -2,7 +2,7 @@ import fs from 'fs';
 import { api } from './lib.mjs';
 import xml from 'xml';
 
-const SITE = 'https://www.reboot-codes.com';
+const SITE = 'https://www.bugfishing.com';
 
 function buildFeed(posts) {
   const sortedPosts = posts.sort(function (first, second) {
@@ -31,7 +31,7 @@ function buildFeed(posts) {
         item.push({
           image: [
             {
-              link: `https://www.reboot-codes.com${
+              link: `https://www.bugfishing.com${
                 post.ogImage.url.startsWith('/') ? post.ogImage.url : `/${post.ogImage.url}`
               }`
             }
@@ -97,12 +97,12 @@ function createRssFeed(posts) {
             }
           },
           {
-            title: "Reboot's Blog"
+            title: "vguttmann's Blog"
           },
           {
             link: `${SITE}/blog`
           },
-          { description: 'Yet another blog, this time, by Reboot.' },
+          { description: 'Yet another blog, this time, by vguttmann.' },
           { language: 'en-US' },
           ...buildFeed(posts)
         ]

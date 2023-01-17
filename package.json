@@ -2,7 +2,7 @@
   "name": "website",
   "version": "1.0.0",
   "description": "My website, made with Next.js, SSR, and MDX.",
-  "author": "Reboot-Codes <git@reboot-codes.com>",
+  "author": "vguttmann <git@bugfishing.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,7 @@
     "build": "yarn build-site && yarn post-build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
+    "export": "next export && rm -rf /var/www/out && cp -r out /var/www",
     "prepare": "husky install"
   },
   "private": true,

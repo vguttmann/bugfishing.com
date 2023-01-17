@@ -161,9 +161,9 @@ export default function Footer() {
             <TechLink href="https://mdxjs.com/" target="_blank">
               MDX
             </TechLink>
-            . Amazingly hosted on{' '}
-            <TechLink href="https://pages.github.com/" target="_blank">
-              GitHub Pages
+            . Amazingly forked from{' '}
+            <TechLink href="https://github.com/reboot-codes/reboot-codes.github.io" target="_blank">
+              Reboot-Codes
             </TechLink>{' '}
             and cached by{' '}
             <TechLink href="https://www.cloudflare.com/" target="_blank">
@@ -172,10 +172,10 @@ export default function Footer() {
             .
           </p>
           <Socials>
-            <SocialButton href="https://github.com/Reboot-Codes" target="_blank" rel="noopener noreferrer">
+            <SocialButton href="https://github.com/vguttmann" target="_blank" rel="noopener noreferrer">
               <BsGithub /> GitHub
             </SocialButton>
-            <SocialButton href="https://github.com/Reboot-Codes/website" target="_blank" rel="noopener noreferrer">
+            <SocialButton href="https://github.com/vguttmann/bugfishing.com" target="_blank" rel="noopener noreferrer">
               <BsCodeSquare /> Source
             </SocialButton>
             <SocialButton href="/feed.rss" target="_blank">
