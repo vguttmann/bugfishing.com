@@ -327,7 +327,7 @@ export default function Home() {
       <HeroSection>
         <About>
           <AboutHeading>
-            Making cool and dumb things
+            Making cool and dumb things with
             <AboutBreak />
             <AboutSpace> </AboutSpace>
             computers since 2014, and on the internet since 2020.
