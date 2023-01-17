@@ -63,8 +63,9 @@ const repos = [
       login: 'jamorham',
       url: 'https://github.com/jamorham'
     },
-    description: 'An enhanced version of the xDrip app that allows blood sugar tracking with sensors, sugar level prediction and more',
-    forkCount: 206,0
+    description:
+      'An enhanced version of the xDrip app that allows blood sugar tracking with sensors, sugar level prediction and more',
+    forkCount: 206,
     url: 'https://github.com/jamorham/xDrip-plus',
     isFork: false,
     isTemplate: false,
@@ -81,7 +82,7 @@ const repos = [
     url: 'https://github.com/AntiMicroX/antimicrox',
     isFork: true,
     isTemplate: false,
-    stargazerCount: 1,181
+    stargazerCount: 1181
   },
   {
     name: 'bugfishing.com',
@@ -102,7 +103,7 @@ const repos = [
       login: 'Reboot-Codes',
       url: 'https://github.com/Reboot-Codes'
     },
-    description: 'Reboot-Codes' website, made with Next.js, SSR, and MDX.',
+    description: 'Reboot-Codes website, made with Next.js, SSR, and MDX.',
     forkCount: 1,
     url: 'https://github.com/Reboot-Codes/reboot-codes.github.io',
     isFork: false,
@@ -128,8 +129,7 @@ const repos = [
       login: 'vguttmann',
       url: 'https://github.com/vguttmann'
     },
-    description:
-      'An interface library for old HP scopes (currently only my HP54645D).',
+    description: 'An interface library for old HP scopes (currently only my HP54645D).',
     forkCount: 0,
     url: 'https://github.com/vguttmann/libscopehp',
     isFork: false,
@@ -392,10 +392,11 @@ export default function Home() {
           <Technology href="https://www.dart.dev/" target="_blank" className="transition">
             <TechnologyName>
               <SiTypescript /> Dart
-            </TechnologyName>x
+            </TechnologyName>
+            x
             <TechnologyDesc>
-              One of my favorite language to write code in. It's type safe and can be compiled into JavaScript to be used
-              anywhere.
+              One of my favorite language to write code in. It's type safe and can be compiled into JavaScript to be
+              used anywhere.
             </TechnologyDesc>
           </Technology>
           <Technology href="https://reactjs.org/" target="_blank" className="transition">
@@ -421,14 +422,18 @@ export default function Home() {
               <SiPostgresql /> Flutter
             </TechnologyName>
             <TechnologyDesc>
-              Together with the Dart programming language, Flutter is a tpye and null-safe framework that can compile to Web, Android, iOS, Windows, macOS, Linux and even embedded devices.
+              Together with the Dart programming language, Flutter is a tpye and null-safe framework that can compile to
+              Web, Android, iOS, Windows, macOS, Linux and even embedded devices.
             </TechnologyDesc>
           </Technology>
           <Technology href="https://www.rust-lang.org/" target="_blank" className="transition">
             <TechnologyName>
               <SiMongodb /> Rust
             </TechnologyName>
-            <TechnologyDesc>A blazingly fast language that's type, memory and thread safe thanks to a few novel approaches. And by far the friendliet and most helpful error messages you'll ever see.</TechnologyDesc>
+            <TechnologyDesc>
+              A blazingly fast language that's type, memory and thread safe thanks to a few novel approaches. And by far
+              the friendliet and most helpful error messages you'll ever see.
+            </TechnologyDesc>
           </Technology>
           <Technology href="https://arduino.cc/" target="_blank" className="transition">
             <TechnologyName>
@@ -442,15 +447,16 @@ export default function Home() {
             <TechnologyName>
               <SiRedis /> KiCad
             </TechnologyName>
-            <TechnologyDesc>
-              An open-source EDA-Suite for designing circuit diagrams and PCBs.
-            </TechnologyDesc>
+            <TechnologyDesc>An open-source EDA-Suite for designing circuit diagrams and PCBs.</TechnologyDesc>
           </Technology>
           <Technology href="https://www.raspberrypi.com/" target="_blank" className="transition">
             <TechnologyName>
               <SiRaspberrypi /> Raspberry Pi
             </TechnologyName>
-            <TechnologyDesc>A credit card sized, ARM based computer for low power, mobile computing. You can never have enough of them.</TechnologyDesc>
+            <TechnologyDesc>
+              A credit card sized, ARM based computer for low power, mobile computing. You can never have enough of
+              them.
+            </TechnologyDesc>
           </Technology>
         </Technologies>
       </TechnologiesSection>
@@ -464,19 +470,24 @@ export default function Home() {
         </MiniAboutSection>
         <AboutMe>
           <p>
-            Since I got my calculator (a TI-84+) when I was about ten, I liked programming stuff. A christmas or two later, my uncle gifted me a development board with an ATMega.
-            Things went smoothly until about February of 2020.
+            Since I got my calculator (a TI-84+) when I was about ten, I liked programming stuff. A christmas or two
+            later, my uncle gifted me a development board with an ATMega. Things went smoothly until about February of
+            2020.
           </p>
           <p>
-            Then, a big change in my life happened: I was diagnosed with Type 1 Diabetes. Since a friend of mine had Diabetes since we can remember, I was quite familiar with it all.
-            But, of course, I needed to spend some time in the clinic, both to rehydrate (I lost about ten kilos of weight), to learn the ropes with diabetes, and for them to find out how
-            much insulin I would need.
+            Then, a big change in my life happened: I was diagnosed with Type 1 Diabetes. Since a friend of mine had
+            Diabetes since we can remember, I was quite familiar with it all. But, of course, I needed to spend some
+            time in the clinic, both to rehydrate (I lost about ten kilos of weight), to learn the ropes with diabetes,
+            and for them to find out how much insulin I would need.
           </p>
           <p>
-            Not much was happening, and needless to say, I was bored out of my mind. So I decided to learn Flutter, and then later, I programmed a small app for a company I did an apprenticeship
-            at. Another thing that was going on is that I got a Dexcom G6 CGM (a small thing that measures my blood sugar every five minutes and sends info to their receiver, and a smartphone).
-            Or at least it should have sent blood sugars over, but Dexcom restricted the app to only run on phones they had tested. Luckily, u/Shabado8  on Reddit made a modified version so the 
-            restriction was removed. And Reddit was my gateway drug into the internet, and into all the stuff I still do to this day.
+            Not much was happening, and needless to say, I was bored out of my mind. So I decided to learn Flutter, and
+            then later, I programmed a small app for a company I did an apprenticeship at. Another thing that was going
+            on is that I got a Dexcom G6 CGM (a small thing that measures my blood sugar every five minutes and sends
+            info to their receiver, and a smartphone). Or at least it should have sent blood sugars over, but Dexcom
+            restricted the app to only run on phones they had tested. Luckily, u/Shabado8 on Reddit made a modified
+            version so the restriction was removed. And Reddit was my gateway drug into the internet, and into all the
+            stuff I still do to this day.
           </p>
           <p>
             Somewhere, something incredible is waiting to be discovered or made. <em>- vguttmann</em> 🎉

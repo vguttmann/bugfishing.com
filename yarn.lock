@@ -3862,10 +3862,10 @@ nanoid@^3.1.30:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.2.tgz#c89622fafb4381cd221421c69ec58547a1eec557"
   integrity sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==
 
-next-mdx-remote@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-2.1.0.tgz#e3dc2d50f192d4c906ff2892d88531fd54da75d7"
-  integrity sha512-fCLkLEgnnFbQg+pIPHpwsHgftjGNNWFHTlijcI+jNve/5Et1t+z+V5tln3eF3nqeBMGUuXjodLs69+Cb2OrxMA==
+next-mdx-remote@^2.1.0:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-2.1.4.tgz#21b2a72bdc9a172f09c1e6e80fc9d79ee480fa51"
+  integrity sha512-HHJasFVgPGjWXW3tWC37NCvHcQUOjJgVUMdwxgVbshwgtDLrGmupNkist/iamDLlvVibU52B9rqM9VAWofq7cA==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
