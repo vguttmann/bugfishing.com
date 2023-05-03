@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My website, made with Next.js, SSR, and MDX.",
   "author": "vguttmann <git@bugfishing.com>",
   "license": "MIT",
